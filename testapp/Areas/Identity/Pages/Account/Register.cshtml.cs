@@ -145,7 +145,7 @@ namespace testapp.Areas.Identity.Pages.Account
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        if (Input.isAdmin == true)//HERE
+                        if (Input.Email.Contains("@rentngo.com"))//HERE
                         {
                             if (!(await _roleManager.RoleExistsAsync("Admin")))
                             {
